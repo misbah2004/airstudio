@@ -1,8 +1,17 @@
 import React from 'react'
 import { MoveRight, Star } from 'lucide-react'
 import { FaStar } from 'react-icons/fa'
+import { useLocation } from 'react-router-dom'
 
 const ShopHeroSection = () => {
+
+ const location = useLocation();
+
+ const  heading =
+  location.pathname === '/shop' ? 'Shop'
+: location.pathname === '/contact' ? 'Contact Us' : 'Store'; 
+
+
   return (
     <>
       <div className='h-[450px] p-1 flex justify-center'>
@@ -12,7 +21,7 @@ const ShopHeroSection = () => {
         </div>
         <div className='w-2xl flex flex-col justify-center items-center'>
           {/* <h3 className='text-[#000000] text-3xl font-semibold'>Empowering Businesses,</h3> */}
-          <h1 className='text-[#FFB53F] text-5xl font-semibold'>Shop</h1>
+          <h1 className='text-[#FFB53F] text-5xl font-semibold'>{heading}</h1>
           <p className='text-center text-[#858585] text-[18px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
           </p>
           {/* <div className='w-full mt-5 text-center flex justify-center space-x-1'>

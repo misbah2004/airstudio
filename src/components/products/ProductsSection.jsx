@@ -1,4 +1,5 @@
 import { Heart, MoveRight, Slice } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 const data = [
@@ -50,7 +51,7 @@ const ProductsSection = () => {
             </div>
             <div className='w-full mt-10 flex flex-wrap justify-center items-center'>
                 {data.map((item)=>(
-                <div className=' w-[400px] h-[400px] p-2'>
+                <Link to="/detail"><div className=' w-[400px] h-[400px] p-2'>
                     <div key={item.id} className=''>
                         <img src={item.img} alt="" className='rounded-t-2xl object' />
                         <div className='bg-[#FFFFFF] shadow-md w-full flex justify-between p-4 rounded-b-2xl'>
@@ -65,8 +66,8 @@ const ProductsSection = () => {
                                 <button className='bg-[#FFB53F] mt-2 px-3 rounded-full' >Add to Cart</button>
                             </div>
                         </div>
-                    </div>
-                </div>))}
+                    </div> 
+                </div></Link>))}
             </div>
         </div>
       </div>

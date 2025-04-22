@@ -1,16 +1,16 @@
 import React from 'react'
 import ShopHeroSection from '../components/home/ShopHeroSection'
-import ProductsSection from '../components/products/ProductsSection'
+import ContactUsSection from '../components/contact/ContactUsSection'
 import SubscriptionSection from '../components/subscribtion/SubscriptionSection'
 
-const ShopPage = () => {
+const ContactUsPage = () => {
   return (
-    <div>
-      <ShopHeroSection />
-      <ProductsSection/>
+    <>
+      <ShopHeroSection/>
+      <ContactUsSection/>
       <SubscriptionSection/>
-    </div>
+    </>
   )
 }
 
-export default ShopPage
+export default ContactUsPage

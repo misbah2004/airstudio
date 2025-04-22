@@ -17,8 +17,8 @@ const Header = () => {
         <ul className="hidden md:flex space-x-8 text-[#707070] cursor-pointer">
           <Link to="/"><li className="hover:text-black">Home</li></Link>
           <Link to="/shop"><li className="hover:text-black">Shop</li></Link>
-          <li className="hover:text-black">Store</li>
-          <li className="hover:text-black">Contact Us</li>
+          <Link to="/store"><li className="hover:text-black">Store</li></Link>
+          <Link to="/contact"><li className="hover:text-black">Contact Us</li></Link>
         </ul>
 
         {/* Icons */}
