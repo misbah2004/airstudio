@@ -114,10 +114,10 @@ const SellerRegisterSection = () => {
           />
         </div>
         <div className="w-full flex justify-center mt-4">
-  <button className="bg-[#FFA900] h-10 w-32 rounded-full text-white font-semibold">
-    Register
-  </button>
-</div>
+          <button className="bg-[#FFA900] h-10 w-32 rounded-full text-white font-semibold">
+            Register
+          </button>
+        </div>
       </div>
     </div>
   );
