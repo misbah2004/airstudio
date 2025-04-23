@@ -1,78 +1,92 @@
-import { Heart, MoveRight, Slice } from 'lucide-react'
+import { Heart, MoveRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React from 'react'
 
 const data = [
-    {
-        img:"/assets/images/card1.jpeg",
-        name:"Minimal Dress",
-        price:"130$",
-
-    },
-    {
-        img:"/assets/images/card1.jpeg",
-        name:"Minimal Dress",
-        price:"130$",
-
-    },
-    {
-        img:"/assets/images/card1.jpeg",
-        name:"Minimal Dress",
-        price:"130$",
-
-    },
-    {
-        img:"/assets/images/card1.jpeg",
-        name:"Minimal Dress",
-        price:"130$",
-
-    },
-    {
-        img:"/assets/images/card1.jpeg",
-        name:"Minimal Dress",
-        price:"130$",
-
-    },
-    {
-        img:"/assets/images/card1.jpeg",
-        name:"Minimal Dress",
-        price:"130$",
-
-    }
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  },
+  {
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "130$",
+  }
 ]
+
 const ProductsSection = () => {
   return (
-    <div>
-      <div className='min-h-screen w-full flex flex-col justify-center bg-[#FCFCFC] p-5 px-10'>
-        <div className='w-full'>
-            <div className='w-full h-10 flex justify-between'>
-                <span><h1 className='text-3xl text-[#FFB53F]'>Featured Products<br /></h1> <span className='text-sm'>Discover our latest collection</span></span>
-                <h1 className='flex gap-0.5'>View All <MoveRight /></h1>
-            </div>
-            <div className='w-full mt-10 flex flex-wrap justify-center items-center'>
-                {data.map((item)=>(
-                <Link to="/detail"><div className=' w-[400px] h-[400px] p-2'>
-                    <div key={item.id} className=''>
-                        <img src={item.img} alt="" className='rounded-t-2xl object' />
-                        <div className='bg-[#FFFFFF] shadow-md w-full flex justify-between p-4 rounded-b-2xl'>
-                            <div className='bg-white flex flex-col space-y-1.5'>
-                                <h1>{item.name}</h1>
-                                <span className='text-[#236EDE] text-lg font-semibold'>{item.price}</span>
-                            </div>
-                            <div className='bg-white '>
-                                <div className='bg-[#F5F5F5] rounded-full flex justify-center items-center py-0.5'>
-                                <Heart />
-                                </div>
-                                <button className='bg-[#FFB53F] mt-2 px-3 rounded-full' >Add to Cart</button>
-                            </div>
-                        </div>
-                    </div> 
-                </div></Link>))}
-            </div>
+    <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 lg:px-16">
+      <div className="w-full flex flex-col justify-center">
+        {/* Header */}
+        <div className="w-full flex justify-between items-center flex-wrap gap-y-4">
+          <div>
+            <h1 className="text-2xl md:text-3xl font-bold text-[#FFB53F]">Featured Products</h1>
+            <p className="text-sm text-[#555]">Discover our latest collection</p>
+          </div>
+          <Link to="/all-products" className="flex items-center text-[#236EDE] gap-1 font-medium">
+            View All <MoveRight />
+          </Link>
+        </div>
+
+        {/* Products Grid */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+          {data.map((item, index) => (
+            <Link key={index} to="/detail" className="w-full max-w-xs">
+              <div className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
+                <img src={item.img} alt={item.name} className="w-full h-60 object-cover" />
+                <div className="p-4 flex justify-between items-start">
+                  <div>
+                    <h2 className="text-lg font-medium">{item.name}</h2>
+                    <p className="text-[#236EDE] text-base font-semibold">{item.price}</p>
+                  </div>
+                  <div className="flex flex-col items-end gap-2">
+                    <div className="p-1 bg-[#F5F5F5] rounded-full">
+                      <Heart className="text-[#333]" />
+                    </div>
+                    <button className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-export default ProductsSection
+export default ProductsSection;

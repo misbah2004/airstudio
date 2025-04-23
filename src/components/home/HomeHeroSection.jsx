@@ -1,56 +1,82 @@
-import { MoveRight, Star } from 'lucide-react'
-import React from 'react'
-import { FaStar } from 'react-icons/fa'
+import { MoveRight } from 'lucide-react';
+import React from 'react';
+import { FaStar } from 'react-icons/fa';
 
 const HomeHeroSection = () => {
   return (
-    <>
-      <div className='h-[450px] p-1 flex justify-center'>
-        <div className='w-xs '>
-          <img src="/assets/images/bannerheadphone.jpeg" alt="" className='h-15 rounded-[40%] mt-20 float-end object-cover ' />
-          <img src="/assets/images/bannergirl.jpeg" alt="" className='h-50 rounded-[50%] mt-25  ml-15 rotate-6' />
-        </div>
-        <div className='w-2xl flex flex-col justify-center items-center'>
-          <h3 className='text-[#000000] text-3xl font-semibold'>Empowering Businesses,</h3>
-          <h1 className='text-[#FFB53F] text-5xl font-semibold'>Elevating Commerce</h1>
-          <p className='text-center text-[#858585] text-[18px]'>A comprehensive e-commerce platform tailored for small and medium-sized
-          businesses in Saudi Arabia, offering seamless solutions for fashion and <br /> 
-          digital products.
-          </p>
-          <div className='w-full mt-5 text-center flex justify-center space-x-1'>
-            <button className='bg-[#236EDE] px-13 py-1 rounded-xl'>Shop Now</button>
-            <button className='px-10 p-[3px] border-[#858585] rounded-xl border-[1px] flex items-center text-center gap-1'>See More <MoveRight /></button>
-          </div>
-          <div className='w-full h-10 mt-4 space-x-1  flex justify-center items-center'>
-            <div className='flex '>
-              <span className='h-5 w-5 bg-[#FFB703] rounded-full block'></span>
-              <span className='h-5 w-5 bg-[#FFB703] rounded-full block'></span>
-              <span className='h-5 w-5 bg-[#FFB703] rounded-full block'></span>
-              <span className='h-5 w-5 bg-[#FFB703] rounded-full block'></span>
-            </div>
-            <div className=' flex space-x-2'>
-              <span className='text-xl text-[#858585]'>4.9</span>
-              <span className='flex justify-center items-center text-xs'>
-              <FaStar className='text-[#FFB703]'/>
-              <FaStar className='text-[#FFB703]'/>
-              <FaStar className='text-[#FFB703]'/>
-              <FaStar className='text-[#FFB703]'/>
-              <FaStar className='text-[#FFB703]'/>
-              </span>
-              <span className='text-[#858585]'>(1.9k Reviews)</span>
-
-            </div>
-          </div>
-
-        </div>
-        <div className='w-xs'>
-          <img src="/assets/images/bannergirl2.png" alt="" className=' object-cover'/>
-          <img src="/assets/images/Apple.png" alt="" className=' h-20 mt-[-40px] ml-3 object-cover'/>
-        </div>
-
+    <div className="min-h-[450px] p-4 flex flex-col md:flex-row justify-center items-center gap-6">
+      {/* Left Images */}
+      <div className="flex md:flex-col items-center gap-3">
+        <img
+          src="/assets/images/bannerheadphone.jpeg"
+          alt=""
+          className="h-28 md:h-36 rounded-[40%] object-cover"
+        />
+        <img
+          src="/assets/images/bannergirl.jpeg"
+          alt=""
+          className="h-40 md:h-52 rounded-full rotate-6 object-cover"
+        />
       </div>
-    </>
-  )
-}
 
-export default HomeHeroSection
+      {/* Center Content */}
+      <div className="flex flex-col justify-center items-center text-center max-w-2xl px-4">
+        <h3 className="text-black text-2xl md:text-3xl font-semibold">
+          Empowering Businesses,
+        </h3>
+        <h1 className="text-[#FFB53F] text-4xl md:text-5xl font-semibold">
+          Elevating Commerce
+        </h1>
+        <p className="text-[#858585] text-base md:text-lg mt-2">
+          A comprehensive e-commerce platform tailored for small and medium-sized
+          businesses in Saudi Arabia, offering seamless solutions for fashion and
+          digital products.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-5 flex flex-col sm:flex-row gap-3">
+          <button className="bg-[#236EDE] text-white px-8 py-2 rounded-xl">
+            Shop Now
+          </button>
+          <button className="px-6 py-2 border border-[#858585] rounded-xl flex items-center gap-2">
+            See More <MoveRight />
+          </button>
+        </div>
+
+        {/* Ratings */}
+        <div className="mt-4 flex flex-col items-center">
+          <div className="flex gap-1">
+            {[...Array(4)].map((_, i) => (
+              <span key={i} className="h-5 w-5 bg-[#FFB703] rounded-full block" />
+            ))}
+          </div>
+          <div className="flex items-center gap-2 mt-1 text-sm text-[#858585]">
+            <span className="text-xl text-[#858585]">4.9</span>
+            <span className="flex text-[#FFB703]">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} />
+              ))}
+            </span>
+            <span>(1.9k Reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Images */}
+      <div className="flex flex-col items-center gap-2">
+        <img
+          src="/assets/images/bannergirl2.png"
+          alt=""
+          className="h-40 md:h-52 object-cover"
+        />
+        <img
+          src="/assets/images/Apple.png"
+          alt=""
+          className="h-14 md:h-20 -mt-6 ml-3 object-cover"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default HomeHeroSection;
