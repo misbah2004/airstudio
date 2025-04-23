@@ -35,10 +35,10 @@ const HomeHeroSection = () => {
 
         {/* Buttons */}
         <div className="mt-5 flex flex-col sm:flex-row gap-3">
-          <button className="bg-[#236EDE] text-white px-8 py-2 rounded-xl">
+          <button className="bg-[#236EDE] text-white px-12 py-2 rounded-xl">
             Shop Now
           </button>
-          <button className="px-6 py-2 border border-[#858585] rounded-xl flex items-center gap-2">
+          <button className="px-8 py-2 border border-[#858585] rounded-xl flex items-center gap-2">
             See More <MoveRight />
           </button>
         </div>
