@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <div className="w-full bg-white">
       <div className="flex flex-col md:flex-row md:justify-between gap-10 p-10">
-        {/* Logo and Description */}
         <div className="md:w-1/4 flex flex-col items-center md:items-start text-center md:text-left">
           <img src="/assets/images/logoimg.png" alt="Logo" className="w-28 h-auto" />
           <p className="mt-6 text-[#858585] text-sm">
@@ -17,8 +16,6 @@ const Footer = () => {
             for fashion and digital products.
           </p>
         </div>
-
-        {/* Product Links */}
         <div className="md:w-1/5 flex flex-col items-center md:items-start space-y-2">
           <h1 className="font-bold">Product</h1>
           <ul className="list-none text-center md:text-left space-y-1">
@@ -29,8 +26,6 @@ const Footer = () => {
             <li>Categories</li>
           </ul>
         </div>
-
-        {/* Company Links */}
         <div className="md:w-1/5 flex flex-col items-center md:items-start space-y-2">
           <h1 className="font-bold">Company</h1>
           <ul className="list-none text-center md:text-left space-y-1">
@@ -39,8 +34,6 @@ const Footer = () => {
             <li>Careers</li>
           </ul>
         </div>
-
-        {/* Legal Links + Social Icons */}
         <div className="md:w-1/5 flex flex-col items-center md:items-start space-y-2">
           <h1 className="font-bold">Legal</h1>
           <ul className="list-none text-center md:text-left space-y-1">

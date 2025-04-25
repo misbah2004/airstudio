@@ -48,7 +48,7 @@ const UserLoginSection = () => {
             <div className="flex justify-center items-center">
               <button
                 type="submit"
-                className="w-full flex justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                className=" flex justify-center rounded-full bg-[#236EDE] px-6 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
               >
                 Sign in
               </button>

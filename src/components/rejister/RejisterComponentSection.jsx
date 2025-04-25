@@ -17,7 +17,7 @@ const RejisterComponentSection = () => {
             My Account Information <br />
             Your Personal Details
           </p>
-          <span className="w-full h-[1px] mt-5 bg-gray-500 block"></span>
+          <span className="w-full h-[1px] mt-5 bg-gray-300 block"></span>
         </div>
         <div className="space-y-2 flex flex-col justify-center items-center">
           <img src="/assets/images/rejisterimg.png" alt="" />
@@ -29,53 +29,67 @@ const RejisterComponentSection = () => {
           <form action="">
             <div className="flex gap-4">
               <div className="flex flex-col">
-                <label htmlFor="">First Name</label>
+                <label htmlFor="" className="text-gray-400">
+                  First Name
+                </label>
                 <input
                   type="text"
-                  className="h-7 p-2 rounded-md border border-gray-400 w-xs"
+                  className="h-7 p-2 rounded-md border border-gray-300 w-xs"
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="">Last Name</label>
+                <label htmlFor="" className="text-gray-400">
+                  Last Name
+                </label>
                 <input
                   type="text"
-                  className="h-7 p-2 border rounded-md border-gray-400 w-xs"
+                  className="h-7 p-2 border rounded-md border-gray-300 w-xs"
                 />
               </div>
             </div>
             <div className="mt-4 flex flex-col">
-              <label htmlFor="">Email Address</label>
+              <label htmlFor="" className="text-gray-400">
+                Email Address
+              </label>
               <input
                 type="text"
-                className="h-7 p-2 border rounded-md border-gray-400 w-full"
+                className="h-7 p-2 border rounded-md border-gray-300 w-full"
               />
             </div>
             <div className="mt-4 flex flex-col">
-              <label htmlFor="">Password</label>
+              <label htmlFor="" className="text-gray-400">
+                Password
+              </label>
               <input
                 type="text"
-                className="h-7 p-2 border rounded-md border-gray-400 w-full"
+                className="h-7 p-2 border rounded-md border-gray-300 w-full"
               />
             </div>
             <div className="flex gap-4">
               <div className="flex flex-col">
-                <label htmlFor="">Phone</label>
+                <label htmlFor="" className="text-gray-400">
+                  Phone
+                </label>
                 <input
                   type="text  "
-                  className="h-7 p-2 rounded-md border border-gray-400 w-xs"
+                  className="h-7 p-2 rounded-md border border-gray-300 w-xs"
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="">Date Of Birth</label>
+                <label htmlFor="" className="text-gray-400">
+                  Date Of Birth
+                </label>
                 <input
                   type="date"
-                  className="p-2 h-7 border rounded-md border-gray-400 w-xs"
+                  className="p-2 h-7 border rounded-md border-gray-400 text-gray-300 w-xs"
                 />
               </div>
             </div>
-              <div className="mt-2 flex justify-end">
-                <button className="bg-[#236EDE] px-5 p-1 rounded-2xl ">Update</button>
-              </div>
+            <div className="mt-2 flex justify-end">
+              <button className="bg-[#236EDE] px-5 p-1 rounded-2xl text-white ">
+                Update
+              </button>
+            </div>
           </form>
         </div>
       </div>

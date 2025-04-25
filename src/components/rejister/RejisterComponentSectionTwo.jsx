@@ -4,7 +4,7 @@ import { FaChevronDown } from 'react-icons/fa'
 const RejisterComponentSectionTwo = () => {
   return (
     <div className='w-full mt-2 flex justify-center items-center'>
-    <div className='p-3 border border-gray-300'>
+    <div className='p-3 border border-gray-300 text-white'>
        <div className=" w-2xl p-2 flex justify-between items-center">
                 <p>1. Edit your account information</p>
                 <span className="">
