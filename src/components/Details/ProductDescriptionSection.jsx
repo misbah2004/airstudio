@@ -3,7 +3,7 @@ import React from "react";
 const ProductDescriptionSection = () => {
   return (
     <div className="p-5">
-      <div className=" p-5 flex flex-col shadow-lg space-y-4">
+      <div className=" p-5 flex flex-col border border-gray-200 space-y-4">
         {/* Tabs */}
         <div className="bg-[#EBEBEB] shadow-sm">
           <ul className="flex p-2  gap-4 font-semibold text-sm sm:text-base cursor-pointer">
@@ -27,7 +27,7 @@ const ProductDescriptionSection = () => {
         {/* Details and Care Section */}
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Features and Material Info */}
-          <div className="w-full lg:w-1/2 space-y-4">
+          <div className="w-full lg:w-1/3 space-y-4">
             <div className="space-y-2">
               <h1 className="font-semibold">Features</h1>
               <ul className="list-disc list-inside text-[#909090] text-sm sm:text-base">

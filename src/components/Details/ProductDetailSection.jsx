@@ -181,14 +181,14 @@ const ProductDetailSection = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-2">
-            <div className="flex-1 border p-4 flex flex-col items-center text-center">
+            <div className="flex-1 border border-[#EBEBEB] p-4 flex flex-col items-center text-center">
               <img src="/assets/images/Vector2.png" alt="" className="h-6 mb-2" />
               <p className="text-sm">
                 Estimate delivery times: 12–26 days (International), 3–6 days
                 (United States).
               </p>
             </div>
-            <div className="flex-1 border p-4 flex flex-col items-center text-center">
+            <div className="flex-1 border p-4 flex flex-col border-[#EBEBEB] items-center text-center">
               <img src="/assets/images/Vector.png" alt="" className="h-6 mb-2" />
               <p className="text-sm">
                 Return within 30 days of purchase. Duties & taxes are

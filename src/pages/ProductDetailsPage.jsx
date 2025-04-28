@@ -4,13 +4,14 @@ import ProductDescriptionSection from '../components/Details/ProductDescriptionS
 import ProductsSection from '../components/products/ProductsSection'
 
 const ProductDetailsPage = () => {
-  const tophead = "People Also Bought";
-  const midhead = "Recently Viewed";
+  // const tophead = ;
+  // const midhead = ;
+
   return (
     <div>
       <ProductDetailSection/>
       <ProductDescriptionSection/>
-      <ProductsSection tophead={tophead} midhead={midhead}/>
+      <ProductsSection  tophead={"Recently Viewed"} midhead={"People Also Bought"}/>
     </div>
   )
 }

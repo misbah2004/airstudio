@@ -3,22 +3,22 @@ import { ArrowRightIcon, Star } from "lucide-react";
 
 const HomeHeroSection = () => {
   return (
-    <div className="grid grid-cols-12 gap-2 md:px-10 lg:px-20 py-12 bg-white sm:py-10 mt-10">
-      <div className="col-span-2  h-[500px] hidden lg:block ">
+    <div className="grid grid-cols-12 gap-2 md:px-10 lg:px-0 py-12 bg-white sm:py-10 mt-10">
+      <div className="col-span-2  hidden lg:block ">
         <img
           src="/assets/images/bannerheadphone.jpeg"
-          className="relative left-50 bottom-5 mt-5 rounded-full h-10 w-15   "
+          className="relative left-40 mb-10 rounded-[50%] h-15 w-20    "
           alt=""
         />
 
         <img
           src="/assets/images/owal.png"
-          className=" relative bottom-25  right-5 mt-10  h-70 max-w-max"
+          className=" relative bottom-25   h-70 max-w-max "
           alt=""
         />
       </div>
 
-      <div className="col-span-12 relative lg:col-span-8  h-[500px] w-full">
+      <div className="col-span-12 relative lg:col-span-8 w-full">
         <h1 className="text-center font-semibold lg:text-4xl sm: text-xl">
           Empowering Businesses,
         </h1>
@@ -26,15 +26,15 @@ const HomeHeroSection = () => {
         <h1 className="text-center text-amber-500 lg:text-5xl  sm: text-3xl font-medium ">
           Elevating Commerce
         </h1>
-        <p className="text-center mt-7  text-gray-500 sm:text-md tracking-wide lg:text-xl">
+        <p className="text-center mt-7  text-gray-500 sm:text-md tracking-wide lg:text-2xl">
           A comprehensive e-commerce platform tailored for small and
-          medium-sized <br /> businesses in Saudi Arabia, offering seamless solutions for fashion and digital<br /> products.{" "}
+          medium-sized <br /> businesses in Saudi Arabia, offering seamless solutions for fashion and <br />  digital products.{" "}
         </p>
 
-        <div className="sm:col-end-3 hidden lg:block absolute right-75  ">
+        <div className="sm:col-end-3 hidden lg:block absolute">
           <img
             src="/public/assets/images/shop/hand.png"
-            className="relative bottom-30 left-17 h-20"
+            className="relative h-20"
             alt=""
           />
         </div>
@@ -70,15 +70,15 @@ const HomeHeroSection = () => {
         </div>
       </div>
 
-      <div className="col-span-2 h-[500px] hidden lg:block">
+      <div className=" w-full col-span-2 hidden lg:block">
         <img
           src="/assets/images/bannergirl2.png"
-          className="h-50 mr-20 relative bottom-15 "
+          className="mt-[-35%] w-80 h-60"
           alt=""
         />
         <img
           src="/assets/images/Apple.png"
-          className="h-20 w-20  relative bottom-16 rounded-full mr-12"
+          className="h-20 w-20 mt-[-30px] rounded-full mr-12"
           alt=""
         />
       </div>

@@ -33,19 +33,19 @@ const ProductsSection = ({
         <div className="w-full text-center text-2xl font-semibold">
           {tophead}
         </div>
-        {/* Products Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:px-15 px-0 md:grid-cols-3 gap-6">
           {data.map((item, index) => (
             <React.Fragment key={index}>
               {index === 3 && (
                 <div className="col-span-full">
-                  <h2 className="text-2xl font-bold text-center my-8">
+                  <h2 className="text-2xl font-bold text-center">
                   {midhead}
                   </h2>
                 </div>
               )}
               <Link to="/detail" className="w-full">
-                <div className="w-full rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
+                <div className="w-full rounded-2xl overflow-hidden bg-white  shadow-xs transition">
                   <img
                     src={item.img}
                     alt={item.name}

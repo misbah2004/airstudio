@@ -8,16 +8,16 @@ const Header = () => {
 
 const location = useLocation();
 
-const paths = ["/detail","/rejister","/order","/ordertable","/chat"];
-const isDetailPage = paths.includes(location.pathname);
-const nav1 = isDetailPage ? "New In" : "Home";
-const nav2 = isDetailPage ? "Trending" : "Shop";
-const nav3 = isDetailPage ? "Shop" : "Store";
-const nav4 = isDetailPage ? "Categories" : "ContactUs";
+// const paths = ["/detail","/rejister","/order","/ordertable","/chat"];
+// const isDetailPage = paths.includes(location.pathname);
+const nav1 = "Home"; //isDetailPage ? "New In" : "Home";
+const nav2 ="Shop"; //isDetailPage ? "Trending" : "Shop";
+const nav3 = "Store";//isDetailPage ? "Shop" : "Store";
+const nav4 = "ContactUs";//isDetailPage ? "Categories" : "ContactUs";
  
 
   return (
-    <div className="w-full shadow-sm">
+    <div className="w-full">
       <nav className="w-full flex justify-between items-center py-5 px-4 md:px-10">
         <div>
           <a href="/">
@@ -71,16 +71,16 @@ const nav4 = isDetailPage ? "Categories" : "ContactUs";
         <div className="md:hidden absolute top-[70px] left-0 w-full bg-white z-50 px-4 pb-4 shadow-md">
           <ul className="flex flex-col space-y-4 text-[#707070]">
             <Link to="/">
-              <li className="hover:text-black">Home</li>
+              <li className="hover:text-black">{nav1}</li>
             </Link>
             <Link to="/shop">
-              <li className="hover:text-black">Shop</li>
+              <li className="hover:text-black">{nav2}</li>
             </Link>
             <Link to="/store">
-              <li className="hover:text-black">Store</li>
+              <li className="hover:text-black">{nav3}</li>
             </Link>
             <Link to="/contact">
-              <li className="hover:text-black">Contact Us</li>
+              <li className="hover:text-black">{nav4}</li>
             </Link>
             <div className="flex space-x-5 mt-4">
               <Search />

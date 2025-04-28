@@ -10,7 +10,7 @@ const ContactUsSection = () => {
       <div className="w-full mt-5 px-4">
         <div className="w-full flex flex-col lg:flex-row justify-center gap-5 p-5">
           {/* Contact Info Box */}
-          <div className="w-full lg:w-1/3 bg-white shadow-xl px-6 py-10 space-y-7 rounded-2xl">
+          <div className="w-full lg:w-1/3 bg-white border border-[#00000040] shadow-sm px-6 py-10 space-y-7 rounded-2xl">
             {/* Phone */}
             <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-6 text-center sm:text-left">
               <div className="h-10 w-10 rounded-full border flex justify-center items-center text-[#236EDE] border-[#236EDE] mb-2 sm:mb-0">
@@ -55,7 +55,7 @@ const ContactUsSection = () => {
 
           {/* Contact Form */}
           <div className="w-full">
-            <div className="isolate bg-white px-6 py-10 sm:py-12 shadow-2xl rounded-2xl">
+            <div className="isolate bg-white px-6 py-10 sm:py-12 border border-[#00000040] shadow-sm rounded-2xl">
               <div className="mx-auto max-w-2xl">
                 <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-[#236EDE] text-center">
                   Get In Touch
@@ -79,7 +79,7 @@ const ContactUsSection = () => {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
+                      className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-[#236EDE]"
                     />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ const ContactUsSection = () => {
                       name="email"
                       id="email"
                       autoComplete="email"
-                      className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
+                      className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-[#236EDE]"
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -104,7 +104,7 @@ const ContactUsSection = () => {
                     >
                       Phone number
                     </label>
-                    <div className="mt-2.5 flex rounded-md bg-white outline outline-1 outline-gray-300 focus-within:outline-2 focus-within:outline-indigo-600">
+                    <div className="mt-2.5 flex rounded-md bg-white outline  outline-gray-300 focus-within:outline-2 focus-within:outline-[#236EDE]">
                       <select
                         id="country"
                         name="country"
@@ -135,7 +135,7 @@ const ContactUsSection = () => {
                       name="message"
                       id="message"
                       rows={4}
-                      className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
+                      className="mt-2.5 block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline  outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-[#236EDE]"
                       defaultValue={""}
                     />
                   </div>
