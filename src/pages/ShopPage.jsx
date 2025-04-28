@@ -5,11 +5,12 @@ import SubscriptionSection from '../components/subscribtion/SubscriptionSection'
 import ProductSideSection from '../components/products/ProductSideSection'
  
 const ShopPage = () => {
+  // const heading = "Shop";
   
   return (
     <div>
-      <ShopHeroSection  />
-      <ProductsSection component={<ProductSideSection/>}   />
+      <ShopHeroSection heading={"Shop"}  />
+      <ProductsSection component={<ProductSideSection/>}/>
       <SubscriptionSection/>
     </div>
   )

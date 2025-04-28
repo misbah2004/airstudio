@@ -1,10 +1,20 @@
 import { CloudDownload, Search, ShoppingBag, Menu } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState(false);
+
+const location = useLocation();
+
+const paths = ["/detail","/rejister","/order","/ordertable","/chat"];
+const isDetailPage = paths.includes(location.pathname);
+const nav1 = isDetailPage ? "New In" : "Home";
+const nav2 = isDetailPage ? "Trending" : "Shop";
+const nav3 = isDetailPage ? "Shop" : "Store";
+const nav4 = isDetailPage ? "Categories" : "ContactUs";
+ 
 
   return (
     <div className="w-full shadow-sm">
@@ -20,16 +30,16 @@ const Header = () => {
         </div>
         <ul className="hidden md:flex space-x-8 text-[#707070] cursor-pointer">
           <Link to="/">
-            <li className="hover:text-black">Home</li>
+            <li className="hover:text-black">{nav1}</li>
           </Link>
           <Link to="/shop">
-            <li className="hover:text-black">Shop</li>
+            <li className="hover:text-black">{nav2}</li>
           </Link>
           <Link to="/store">
-            <li className="hover:text-black">Store</li>
+            <li className="hover:text-black">{nav3}</li>
           </Link>
           <Link to="/contact">
-            <li className="hover:text-black">Contact Us</li>
+            <li className="hover:text-black">{nav4}</li>
           </Link>
         </ul>
         <div className="hidden md:flex space-x-5 items-center">

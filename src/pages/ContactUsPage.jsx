@@ -4,9 +4,10 @@ import ContactUsSection from '../components/contact/ContactUsSection'
 import SubscriptionSection from '../components/subscribtion/SubscriptionSection'
 
 const ContactUsPage = () => {
+  
   return (
     <>
-      <ShopHeroSection/>
+      <ShopHeroSection heading={"Contact Us"}/>
       <ContactUsSection/>
       <SubscriptionSection/>
     </>

@@ -12,9 +12,9 @@ import {
 const ProductDetailSection = () => {
   return (
     <div className="w-full flex flex-col lg:flex-row lg:space-x-4 mt-5 p-5">
-      {/* IMAGES */}
+
       <div className="flex flex-col lg:flex-row">
-        {/* thumbnails */}
+
         <div className="flex space-y-2 lg:flex-col lg:space-y-4 overflow-y-auto lg:overflow-y-visible lg:overflow-x-visible lg:w-20 px-2">
           {[
             'detail1.jpeg',
@@ -33,7 +33,7 @@ const ProductDetailSection = () => {
           ))}
         </div>
 
-        {/* main image */}
+
         <div className="mt-4 lg:mt-0">
           <img
             src="/assets/images/detail.png"
@@ -43,11 +43,11 @@ const ProductDetailSection = () => {
         </div>
       </div>
 
-      {/* DETAILS */}
+
       <div className="w-full lg:w-2/5 flex flex-col space-y-4 mt-6 lg:mt-0">
         <h1 className="font-albert text-2xl">Ribbed Tank Top</h1>
 
-        {/* badge + message */}
+
         <div className="flex flex-wrap items-center gap-2">
           <button className="rounded-sm p-1 border border-black">
             Best seller
@@ -105,7 +105,6 @@ const ProductDetailSection = () => {
           </div>
         </div>
 
-        {/* size */}
         <div>
           <h1>
             Size: <span className="font-semibold">M</span>
@@ -134,22 +133,22 @@ const ProductDetailSection = () => {
           </div>
         </div>
 
-        {/* actions */}
+
         <div className="flex flex-wrap items-center gap-2">
-          <button className="bg-black text-white px-6 py-2 rounded-lg">
+          <button className="bg-black w-[400px] text-white px-6 py-2 rounded-lg">
             Add to cart - $16.95
           </button>
           <Trash2 className="w-10 h-10 p-2 border border-[#EBEBEB] rounded" />
           <FaCheck className="w-10 h-10 p-2 border border-[#EBEBEB] rounded" />
         </div>
 
-        {/* buy with paypal */}
+
         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <button className="flex items-center justify-center gap-2 bg-[#FFB53F] text-white rounded-full px-4 py-2 ">
+          <button className="flex w-full items-center justify-center gap-2 bg-[#FFB53F] text-white rounded-full px-4 py-2 ">
             Buy with <img src="/assets/images/paypal.png" alt="PayPal" className="h-6" />
           </button>
-          <p className="text-[#868686] sm:ml-40 text-sm">More payment options</p>
         </div>
+          <p className="text-[#868686] sm:ml-40 text-center text-sm">More payment options</p>
 
         {/* info & share */}
         <div className="space-y-4">

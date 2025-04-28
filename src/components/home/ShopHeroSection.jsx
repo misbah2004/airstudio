@@ -1,13 +1,13 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-const ShopHeroSection = () => {
+const ShopHeroSection = ({heading}) => {
 
- const location = useLocation();
+//  const location = useLocation();
 
- const  heading =
-  location.pathname === '/shop' ? 'Shop'
-: location.pathname === '/contact' ? 'Contact' : 'Store'; 
+//  const  heading =
+//   location.pathname === '/shop' ? 'Shop'
+// : location.pathname === '/contact' ? 'Contact' : 'Store'; 
 
 
   return (
@@ -18,7 +18,7 @@ const ShopHeroSection = () => {
           <img src="/assets/images/shopheroimg.png" alt="" className='' />
         </div>
         <div className='w-2xl flex flex-col justify-center items-center'>
-          <h1 className='text-[#FFB53F] text-5xl font-semibold'>{heading}</h1>
+          <h1 className='text-[#FFB53F] text-5xl font-semibold'>{heading }</h1>
           <p className='text-center text-[#858585] text-[18px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
           </p>
         </div>

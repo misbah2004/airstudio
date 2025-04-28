@@ -3,9 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import React from "react";
 import { data } from "../data/utilites";
 
-
-
-const ProductsSection = ({component,head,head2,head3,tophead,midhead}) => {
+const ProductsSection = ({
+  component,
+  head,
+  head2,
+  head3,
+  tophead,
+  midhead,
+}) => {
   return (
     <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8  flex">
       <div>{component}</div>
@@ -14,51 +19,57 @@ const ProductsSection = ({component,head,head2,head3,tophead,midhead}) => {
         <div className="w-full flex justify-between items-center flex-wrap gap-y-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-[#FFB53F]">
-            {head}
+              {head}
             </h1>
-            <p className="text-sm text-[#555]">
-              {head2}
-            </p>
+            <p className="text-sm text-[#555]">{head2}</p>
           </div>
           <Link
             to=""
             className="flex items-center text-[#236EDE] gap-1 font-medium"
-            >
-            {head3} 
+          >
+            {head3}
           </Link>
         </div>
-            <div className="w-full text-center text-2xl font-semibold">{tophead}</div>
+        <div className="w-full text-center text-2xl font-semibold">
+          {tophead}
+        </div>
         {/* Products Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {data.map((item, index) => (
-            <Link key={index} to="/detail" className="w-full">
-              <div className="w-full rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-60 object-cover hover:scale-105 duration-300"
-                />
-                <div className="p-4 flex justify-between items-start">
-                  <div>
-                    <h2 className="text-lg font-medium">{item.name}</h2>
-                    <p className="text-[#236EDE] text-base font-semibold">
-                      {item.price}
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-end gap-2">
-                    <div className="p-1 bg-[#F5F5F5] rounded-full">
-                      <Heart className="text-[#333]" />
+            <React.Fragment key={index}>
+              {index === 3 && (
+                <div className="col-span-full">
+                  <h2 className="text-2xl font-bold text-center my-8">
+                  {midhead}
+                  </h2>
+                </div>
+              )}
+              <Link to="/detail" className="w-full">
+                <div className="w-full rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-lg transition">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-60 object-cover hover:scale-105 duration-300"
+                  />
+                  <div className="p-4 flex justify-between items-start">
+                    <div>
+                      <h2 className="text-lg font-medium">{item.name}</h2>
+                      <p className="text-[#236EDE] text-base font-semibold">
+                        {item.price}
+                      </p>
                     </div>
-                    <button className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full">
-                      Add to Cart
-                    </button>
+                    <div className="flex flex-col items-end gap-2">
+                      <div className="p-1 bg-[#F5F5F5] rounded-full">
+                        <Heart className="text-[#333]" />
+                      </div>
+                      <button className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full">
+                        Add to Cart
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/* {index === 2(
-                <div>{midhead}</div>
-              )} */}
-            </Link>
+              </Link>
+            </React.Fragment>
           ))}
         </div>
       </div>

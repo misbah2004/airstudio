@@ -3,10 +3,10 @@ import React from "react";
 const ProductDescriptionSection = () => {
   return (
     <div className="p-5">
-      <div className="p-4 flex flex-col shadow-lg space-y-4">
+      <div className=" p-5 flex flex-col shadow-lg space-y-4">
         {/* Tabs */}
-        <div className="bg-[#EBEBEB] h-auto p-2 shadow-sm">
-          <ul className="flex flex-wrap items-center gap-4 font-semibold text-sm sm:text-base cursor-pointer">
+        <div className="bg-[#EBEBEB] shadow-sm">
+          <ul className="flex p-2  gap-4 font-semibold text-sm sm:text-base cursor-pointer">
             <li className="hover:border-b-2 hover:border-black">Description</li>
             <li className="hover:border-b-2 hover:border-black">Review</li>
             <li className="hover:border-b-2 hover:border-black">Shipping</li>
