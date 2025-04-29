@@ -14,7 +14,7 @@ import React from 'react'
             <PackageOpen />
             <span>New In</span>
             <span>Latest arrivals and trends</span>
-
+        
             </div>
             <div className='bg-[#F6FAFF] p-5 flex flex-col justify-center items-center rounded-md'>
             <Flame />

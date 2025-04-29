@@ -78,7 +78,7 @@ const HomeHeroSection = () => {
         />
         <img
           src="/assets/images/Apple.png"
-          className="h-20 w-20 mt-[-30px] rounded-full mr-12"
+          className="h-20 w-20 mt-[-40px] rounded-full mr-20"
           alt=""
         />
       </div>

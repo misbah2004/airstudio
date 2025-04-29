@@ -13,3 +13,6 @@
 body{
     font-family: "roboto";
 }
+/* body::-webkit-scrollbar {
+    display: none;
+  } */

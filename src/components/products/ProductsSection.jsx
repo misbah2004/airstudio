@@ -3,19 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import React from "react";
 import { data } from "../data/utilites";
 
-const ProductsSection = ({
-  component,
-  head,
-  head2,
-  head3,
-  tophead,
-  midhead,
-}) => {
+const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
   return (
-    <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8  flex">
+    <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 flex">
       <div>{component}</div>
-      <div className="w-full flex flex-col justify-center">
-        {/* Header */}
+      <div className="w-full px-6 flex flex-col justify-center">
         <div className="w-full flex justify-between items-center flex-wrap gap-y-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-[#FFB53F]">
@@ -34,7 +26,7 @@ const ProductsSection = ({
           {tophead}
         </div>
         
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:px-15 px-0 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {data.map((item, index) => (
             <React.Fragment key={index}>
               {index === 3 && (

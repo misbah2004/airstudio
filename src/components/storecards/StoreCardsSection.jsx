@@ -4,9 +4,9 @@ import { Star } from "lucide-react";
 
 const StoreCardsSection = () => {
   return (
-    <>
+    <div className="flex justify-center items-center">
         {storeCardSection.map((items) => (
-          <div className="w-sm bg-white shadow-lg rounded-xl flex flex-col p-4">
+          <div className="w-[350px] bg-white shadow-lg rounded-xl flex flex-col p-4">
             <img src={items.img} alt="" className="object-cover h-[240px]" />
             <h1 className="text-center font-semibold">{items.heading}</h1>
             <span className="flex justify-center text-[#FFA900] flex-nowrap">
@@ -20,7 +20,7 @@ const StoreCardsSection = () => {
             </span>
           </div>
         ))}
-    </>
+    </div>
   );
 };
 

@@ -29,7 +29,7 @@ const RejisterComponentSection = () => {
           <form action="">
             <div className="flex gap-4">
               <div className="flex flex-col">
-                <label htmlFor="" className="text-gray-400">
+                <label htmlFor="" className="text-black">
                   First Name
                 </label>
                 <input
@@ -38,7 +38,7 @@ const RejisterComponentSection = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="" className="text-gray-400">
+                <label htmlFor="" className="text-black">
                   Last Name
                 </label>
                 <input
@@ -48,7 +48,7 @@ const RejisterComponentSection = () => {
               </div>
             </div>
             <div className="mt-4 flex flex-col">
-              <label htmlFor="" className="text-gray-400">
+              <label htmlFor="" className="text-black">
                 Email Address
               </label>
               <input
@@ -57,7 +57,7 @@ const RejisterComponentSection = () => {
               />
             </div>
             <div className="mt-4 flex flex-col">
-              <label htmlFor="" className="text-gray-400">
+              <label htmlFor="" className="text-black">
                 Password
               </label>
               <input
@@ -67,7 +67,7 @@ const RejisterComponentSection = () => {
             </div>
             <div className="flex gap-4">
               <div className="flex flex-col">
-                <label htmlFor="" className="text-gray-400">
+                <label htmlFor="" className="text-black">
                   Phone
                 </label>
                 <input
@@ -76,7 +76,7 @@ const RejisterComponentSection = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="" className="text-gray-400">
+                <label htmlFor="" className="text-black">
                   Date Of Birth
                 </label>
                 <input
@@ -86,7 +86,7 @@ const RejisterComponentSection = () => {
               </div>
             </div>
             <div className="mt-2 flex justify-end">
-              <button className="bg-[#236EDE] px-5 p-1 rounded-2xl text-white ">
+              <button className="bg-[#236EDE] px-5 p-2   rounded-full mt-5 text-white ">
                 Update
               </button>
             </div>

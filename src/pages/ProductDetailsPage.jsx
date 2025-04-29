@@ -4,9 +4,6 @@ import ProductDescriptionSection from '../components/Details/ProductDescriptionS
 import ProductsSection from '../components/products/ProductsSection'
 
 const ProductDetailsPage = () => {
-  // const tophead = ;
-  // const midhead = ;
-
   return (
     <div>
       <ProductDetailSection/>

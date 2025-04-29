@@ -79,11 +79,11 @@ const ProductDetailSection = () => {
         </div>
 
         {/* countdown */}
-        <div className="border border-[#FFB53F] p-4 flex flex-col items-center">
+        <div className="border border-[#FFB53F] p-4 w-sm flex flex-col items-center">
           <span className="flex items-center gap-1 text-sm">
             <FaStopwatch /> HURRY UP! SALE ENDS IN:
           </span>
-          <span className="text-2xl text-[#FFB53F] mt-1">
+          <span className="text-sm text-[#FFB53F] mt-1">
             72 Days : 1 Hours : 15 Mins : 10 Secs
           </span>
         </div>

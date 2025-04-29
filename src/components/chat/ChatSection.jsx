@@ -6,7 +6,7 @@ const ChatSection = () => {
   return (
     <div>
       <div className='p-10 '>
-      <button className='bg-[#236EDE] px-5 p-1 rounded-full'>Back</button>
+      <button className='bg-[#236EDE] text-white px-5 p-1 rounded-full'>Back</button>
       <div className='w-full  mt-5 rounded-sm border border-gray-300'>
         <div className='w-full h-10 flex items-center p-5 bg-[#21252908]'>
             <h1 className='text-lg font-semibold'>Chat</h1>

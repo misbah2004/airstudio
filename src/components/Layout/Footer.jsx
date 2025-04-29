@@ -40,7 +40,7 @@ const Footer = () => {
             <li>Privacy Policy</li>
             <li>Terms Of Service</li>
           </ul>
-          <div className="flex justify-center md:justify-start space-x-4 mt-4">
+          <div className="flex justify-center md:justify-start space-x-4 mt-12">
             <FaLinkedin />
             <FaXTwitter />
             <FaFacebook />
