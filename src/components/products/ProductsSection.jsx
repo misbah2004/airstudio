@@ -1,9 +1,13 @@
 import { Heart, MoveRight } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import React from "react";
 import { data } from "../data/utilites";
 
+
 const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
+  
+// const {id} = useParams();
+// const items = data.find(item => String(item.id) === String(id));
   return (
     <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 flex">
       <div>{component}</div>
@@ -36,7 +40,7 @@ const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
                   </h2>
                 </div>
               )}
-              <Link to="/detail" className="w-full">
+              <Link to='/detail' className="w-full">
                 <div className="w-full rounded-2xl overflow-hidden bg-white  shadow-xs transition">
                   <img
                     src={item.img}

@@ -1,5 +1,5 @@
 import { RotateCcw, Trash2 } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import {
   FaCheck,
   FaQuestion,
@@ -8,8 +8,9 @@ import {
   FaStopwatch,
   FaTruck,
 } from 'react-icons/fa'
-
 const ProductDetailSection = () => {
+  const [quantity, setQuantity] = useState(0);
+  const [size, setSize] = useState("")
   return (
     <div className="w-full flex flex-col lg:flex-row lg:space-x-4 mt-5 p-5">
 
@@ -78,7 +79,7 @@ const ProductDetailSection = () => {
           <span className="font-semibold text-sm">People are viewing this right now</span>
         </div>
 
-        {/* countdown */}
+        
         <div className="border border-[#FFB53F] p-4 w-sm flex flex-col items-center">
           <span className="flex items-center gap-1 text-sm">
             <FaStopwatch /> HURRY UP! SALE ENDS IN:
@@ -88,7 +89,6 @@ const ProductDetailSection = () => {
           </span>
         </div>
 
-        {/* color */}
         <div>
           <h1 className="flex items-center gap-1">
             Color: <span className="font-semibold">Beige</span>
@@ -107,14 +107,15 @@ const ProductDetailSection = () => {
 
         <div>
           <h1>
-            Size: <span className="font-semibold">M</span>
+            Size: <span className="font-semibold">{size}</span>
           </h1>
           <div className="flex flex-wrap gap-2 mt-2">
             {['S', 'M', 'L', 'XL'].map((s) => (
               <button
+              onClick={() => setSize(s) }
                 key={s}
-                className={`px-4 py-1 text-2xl border ${
-                  s === 'M' ? 'bg-black text-white' : 'border-black'
+                className={`px-2 py-1 text-md border ${
+                  s === size ? 'bg-black text-white' : 'border-black'
                 }`}
               >
                 {s}
@@ -123,13 +124,17 @@ const ProductDetailSection = () => {
           </div>
         </div>
 
-        {/* quantity */}
         <div>
           <h1>Quantity</h1>
           <div className="flex items-center justify-between w-full max-w-[120px] bg-[#F2F2F2] px-3 py-1 mt-1">
-            <button className="text-2xl">-</button>
-            <span className="text-2xl">1</span>
-            <button className="text-2xl">+</button>
+            <button onClick={() => setQuantity(quantity + 1) }  className="text-2xl">+</button>
+            <span className="text-2xl">{quantity}</span>
+            <button onClick={
+              () => {
+                if (quantity > 0) {
+                  setQuantity(quantity - 1);
+                }
+              }} className="text-2xl">-</button>
           </div>
         </div>
 
@@ -150,7 +155,7 @@ const ProductDetailSection = () => {
         </div>
           <p className="text-[#868686] sm:ml-40 text-center text-sm">More payment options</p>
 
-        {/* info & share */}
+ 
         <div className="space-y-4">
           <div className="flex flex-wrap gap-6">
             <div className="flex items-center gap-2">

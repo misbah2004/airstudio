@@ -14,6 +14,7 @@ import UserRejisterPage from './pages/UserRegisterPage'
 import UserRegisterPage from './pages/UserRegisterPage'
 import UserLoginPage from './pages/UserLoginPage'
 import SellerRegisterPage from './pages/SellerRegisterPage'
+import { data } from './components/data/utilites'
 const App = () => {
 
   return (
