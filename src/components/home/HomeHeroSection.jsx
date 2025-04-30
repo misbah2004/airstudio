@@ -73,7 +73,7 @@ const HomeHeroSection = () => {
       <div className=" w-full col-span-2 hidden lg:block">
         <img
           src="/assets/images/bannergirl2.png"
-          className="mt-[-35%] w-80 h-60"
+          className="mt-[-20%] w-80 h-60"
           alt=""
         />
         <img

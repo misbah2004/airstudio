@@ -3,7 +3,7 @@ import React from "react";
 const UserRegisterSection = () => {
   return (
     <div>
-      <div className="flex min-h-full flex-col justify-center px-6 py-6 lg:px-8">
+      <div className="flex mt-5 min-h-full flex-col justify-center px-6 py-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-lg">
           <h2 className="mt-5 text-center text-2xl font-bold tracking-tight text-[#236EDE]">
             Register

@@ -3,7 +3,7 @@ import React from "react";
 const ProductDescriptionSection = () => {
   return (
     <div className="p-5">
-      <div className=" p-5 flex flex-col border border-gray-200 space-y-4 w-6xl">
+      <div className=" p-5 flex flex-col border border-gray-200 space-y-4">
         {/* Tabs */}
         <div className="bg-[#EBEBEB] shadow-sm">
           <ul className="flex p-2  gap-4 font-semibold text-sm sm:text-base cursor-pointer">

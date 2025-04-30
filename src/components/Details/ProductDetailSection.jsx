@@ -1,5 +1,6 @@
 import { RotateCcw, Trash2 } from 'lucide-react'
 import React, { useState } from 'react'
+import { data } from '../data/utilites'
 import {
   FaCheck,
   FaQuestion,
@@ -8,23 +9,22 @@ import {
   FaStopwatch,
   FaTruck,
 } from 'react-icons/fa'
+import { Link, useParams } from 'react-router-dom';
 const ProductDetailSection = () => {
   const [quantity, setQuantity] = useState(0);
   const [size, setSize] = useState("")
+  const {id} = useParams();
+  const product = data.find((item) => String(item.id) === String(id));
+  if (!product) {
+    return <div className="p-4 text-red-500">Product not found</div>;
+  }
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:space-x-4 mt-5 p-5">
+    <div className="w-full flex flex-col lg:flex-row lg:space-x-4 mt-14 p-5 ">
 
       <div className="flex flex-col lg:flex-row">
 
         <div className="flex space-y-2 lg:flex-col lg:space-y-4 overflow-y-auto lg:overflow-y-visible lg:overflow-x-visible lg:w-20 px-2">
-          {[
-            'detail1.jpeg',
-            'detail2.jpeg',
-            'detail3.jpeg',
-            'detail4.jpeg',
-            'detail5.jpeg',
-            'detail6.jpeg',
-          ].map((img, i) => (
+          {product.detail.map((img, i) => (
             <img
               key={i}
               src={`/assets/images/${img}`}
@@ -37,16 +37,16 @@ const ProductDetailSection = () => {
 
         <div className="mt-4 lg:mt-0">
           <img
-            src="/assets/images/detail.png"
+            src={product.img}
             alt=""
-            className="w-full lg:w-[550px] h-auto lg:h-[570px] object-cover rounded-2xl"
+            className="w-full lg:w-[550px] hover:scale-105 duration-300 h-auto lg:h-[570px] object-cover rounded-2xl"
           />
         </div>
       </div>
 
 
       <div className="w-full lg:w-2/5 flex flex-col space-y-4 mt-6 lg:mt-0">
-        <h1 className="font-albert text-2xl">Ribbed Tank Top</h1>
+        <h1 className="font-albert text-2xl">{product.name}</h1>
 
 
         <div className="flex flex-wrap items-center gap-2">
@@ -67,7 +67,7 @@ const ProductDetailSection = () => {
 
         {/* price */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-2xl text-[#FFB53F]">$16.95</span>
+          <span className="text-2xl text-[#FFB53F]">{product.price}</span>
           <span className="text-2xl line-through">$10.00</span>
           <button className="bg-[#FFB53F] text-white rounded-full px-2 py-1 text-sm">
             20% OFF
@@ -148,11 +148,11 @@ const ProductDetailSection = () => {
         </div>
 
 
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <Link to="/userregister"><div className="flex flex-col sm:flex-row sm:items-center gap-2">
           <button className="flex w-full items-center justify-center gap-2 bg-[#FFB53F] text-white rounded-full px-4 py-2 ">
             Buy with <img src="/assets/images/paypal.png" alt="PayPal" className="h-6" />
           </button>
-        </div>
+        </div></Link>
           <p className="text-[#868686] sm:ml-40 text-center text-sm">More payment options</p>
 
  

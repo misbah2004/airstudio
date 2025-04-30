@@ -17,8 +17,8 @@ const nav4 = "ContactUs";//isDetailPage ? "Categories" : "ContactUs";
  
 
   return (
-    <div className="w-full">
-      <nav className="w-full flex justify-between items-center py-5 px-4 md:px-10">
+    <div className="w-full fixed right-0 left-0 top-0 bg-white z-99">
+      <nav className="w-full flex justify-between items-center py-4 px-4 md:px-10">
         <div>
           <a href="/">
           <img

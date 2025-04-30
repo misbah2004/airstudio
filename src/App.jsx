@@ -15,6 +15,7 @@ import UserRegisterPage from './pages/UserRegisterPage'
 import UserLoginPage from './pages/UserLoginPage'
 import SellerRegisterPage from './pages/SellerRegisterPage'
 import { data } from './components/data/utilites'
+import AddToCart from './components/cart/AddToCart'
 const App = () => {
 
   return (
@@ -25,7 +26,7 @@ const App = () => {
       <Route path='/shop' element={<ShopPage/>}/>
       <Route path='/store' element={<StorePage/>}/>
       <Route path='/contact' element={<ContactUsPage/>}/>
-      <Route path='/detail' element={<ProductDetailsPage/>}/>
+      <Route path='/detail/:id' element={<ProductDetailsPage/>}/>
       <Route path='/rejister' element={<RejisterPage/>}/>
       <Route path='/order' element={<OrderPage/>}/>
       <Route path='/ordertable' element={<OrderTablePage/>}/>
@@ -33,6 +34,7 @@ const App = () => {
       <Route path='/userregister' element={<UserRegisterPage/>}/>
       <Route path='/userlogin' element={<UserLoginPage/>}/>
       <Route path='/sellerregister' element={<SellerRegisterPage/>}/>
+      <Route path='/cart' element={<AddToCart/>}/>
     </Routes>
       </Layout>
     </>

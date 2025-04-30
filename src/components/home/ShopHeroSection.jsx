@@ -7,7 +7,7 @@ const ShopHeroSection = ({heading}) => {
     <>
       <div className='h-[450px] flex justify-center items-center '>
         <div className='w-xs hidden lg:block'>
-          <img src="/assets/images/bannerheadphone.jpeg" alt="" className='h-15 w-15 rounded-[100%] float-end object-cover ' />
+          <img src="/assets/images/bannerheadphone.jpeg" alt="" className='h-15 w-15 mt-2 rounded-[100%] float-end object-cover ' />
           <img src="/assets/images/shopheroimg.png" alt="" className='' />
         </div>
         <div className=' lg:mt-[15%] flex flex-col justify-center items-center'>

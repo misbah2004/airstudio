@@ -41,7 +41,7 @@ const OrderTableSection = () => {
   });
 
   return (
-    <div className='p-10'>
+    <div className='p-10 mt-10'>
        <button className='bg-[#236EDE] px-5 p-1 mb-3 rounded-full text-white'>Back</button>
       <MaterialReactTable  table={table}  />
     </div>

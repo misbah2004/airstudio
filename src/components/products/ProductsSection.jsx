@@ -1,13 +1,15 @@
 import { Heart, MoveRight } from "lucide-react";
 import { Link, useLocation, useParams } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import { data } from "../data/utilites";
 
 
 const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
-  
-// const {id} = useParams();
-// const items = data.find(item => String(item.id) === String(id));
+  const [like, setLike] = useState({})
+  const togleLike = (id) => {
+    setLike((prev) => ({...prev, [id]: !prev[id]}));
+  }
+
   return (
     <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 flex">
       <div>{component}</div>
@@ -40,8 +42,8 @@ const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
                   </h2>
                 </div>
               )}
-              <Link to='/detail' className="w-full">
-                <div className="w-full rounded-2xl overflow-hidden bg-white  shadow-xs transition">
+              <Link to={`/detail/${item.id}`} className="w-full">
+                <div className="w-full rounded-2xl overflow-hidden bg-white object-contain shadow-xs transition">
                   <img
                     src={item.img}
                     alt={item.name}
@@ -56,11 +58,11 @@ const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
                     </div>
                     <div className="flex flex-col items-end gap-2">
                       <div className="p-1 bg-[#F5F5F5] rounded-full">
-                        <Heart className="text-[#333]" />
+                        <Heart onClick={(e) => { e.preventDefault(); togleLike(item.id);}}  className={`text-black ${like[item.id] ? "text-white" : ""}`} />
                       </div>
-                      <button className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full">
+                      <Link to="/cart" ><button className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full">
                         Add to Cart
-                      </button>
+                      </button></Link>
                     </div>
                   </div>
                 </div>
