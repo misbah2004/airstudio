@@ -35,11 +35,11 @@ const ProductDetailSection = () => {
         </div>
 
 
-        <div className="mt-4 lg:mt-0">
+        <div className="mt-4 lg:mt-0 overflow-hidden rounded-2xl">
           <img
             src={product.img}
             alt=""
-            className="w-full lg:w-[550px] hover:scale-105 duration-300 h-auto lg:h-[570px] object-cover rounded-2xl"
+            className="w-full lg:w-[550px] hover:scale-105 duration-300 h-auto lg:h-[570px] object-cover"
           />
         </div>
       </div>
@@ -149,7 +149,7 @@ const ProductDetailSection = () => {
 
 
         <Link to="/userregister"><div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <button className="flex w-full items-center justify-center gap-2 bg-[#FFB53F] text-white rounded-full px-4 py-2 ">
+          <button onClick={() => window.scrollTo(0,0)} className="flex w-full items-center justify-center gap-2 bg-[#FFB53F] text-white rounded-full px-4 py-2 ">
             Buy with <img src="/assets/images/paypal.png" alt="PayPal" className="h-6" />
           </button>
         </div></Link>

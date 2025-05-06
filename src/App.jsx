@@ -16,11 +16,15 @@ import UserLoginPage from './pages/UserLoginPage'
 import SellerRegisterPage from './pages/SellerRegisterPage'
 import { data } from './components/data/utilites'
 import AddToCart from './components/cart/AddToCart'
+import ProductsSection from './components/products/ProductsSection'
+import { Toaster } from 'react-hot-toast'
+import AllProducts from './components/products/AllProducts'
 const App = () => {
 
   return (
     <>
       <Layout>
+      <Toaster />
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/shop' element={<ShopPage/>}/>
@@ -35,6 +39,7 @@ const App = () => {
       <Route path='/userlogin' element={<UserLoginPage/>}/>
       <Route path='/sellerregister' element={<SellerRegisterPage/>}/>
       <Route path='/cart' element={<AddToCart/>}/>
+      <Route path='/allproducts' element={<AllProducts/>}/>
     </Routes>
       </Layout>
     </>

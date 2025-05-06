@@ -5,9 +5,10 @@ import SalesSection from '../components/sales/SalesSection'
 import SubscriptionSection from '../components/subscribtion/SubscriptionSection'
 import ProductSideSection from '../components/products/ProductSideSection'
 import { MoveRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 const HomePage = () => {
   
-const head3 = <span className="flex gap-x-2 text-gray-500">View All <MoveRight /></span>;
+const head3 = <Link to='/allproducts'><span className="flex gap-x-2 text-gray-500">View All <MoveRight /></span></Link>;
 
   return (
     <div>

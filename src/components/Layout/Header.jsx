@@ -1,45 +1,57 @@
 import { CloudDownload, Search, ShoppingBag, Menu } from "lucide-react";
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState(false);
+  const navigate = useNavigate();
+  const { cart } = useSelector((state) => state.allCart);
+  // const cartQaount = items.length;
+  const cartQaount = cart.length;
 
-const location = useLocation();
+  // const location = useLocation();
 
-// const paths = ["/detail","/rejister","/order","/ordertable","/chat"];
-// const isDetailPage = paths.includes(location.pathname);
-const nav1 = "Home"; //isDetailPage ? "New In" : "Home";
-const nav2 ="Shop"; //isDetailPage ? "Trending" : "Shop";
-const nav3 = "Store";//isDetailPage ? "Shop" : "Store";
-const nav4 = "ContactUs";//isDetailPage ? "Categories" : "ContactUs";
- 
+  // const paths = ["/detail","/rejister","/order","/ordertable","/chat"];
+  // const isDetailPage = paths.includes(location.pathname);
+  const nav1 = "Home"; //isDetailPage ? "New In" : "Home";
+  const nav2 = "Shop"; //isDetailPage ? "Trending" : "Shop";
+  const nav3 = "Store"; //isDetailPage ? "Shop" : "Store";
+  const nav4 = "ContactUs"; //isDetailPage ? "Categories" : "ContactUs";
 
   return (
     <div className="w-full fixed right-0 left-0 top-0 bg-white z-99">
       <nav className="w-full flex justify-between items-center py-4 px-4 md:px-10">
         <div>
           <a href="/">
-          <img
-            src="/assets/images/logoimg.png"
-            alt="Logo"
-            className="h-[20px]"
-          />
+            <img
+              src="/assets/images/logoimg.png"
+              alt="Logo"
+              className="h-[20px]"
+            />
           </a>
         </div>
         <ul className="hidden md:flex space-x-8 text-[#707070] cursor-pointer">
           <Link to="/">
-            <li className="hover:text-black">{nav1}</li>
+            <button onClick={() => window.scrollTo(0, 0)}>
+              <li className="hover:text-black">{nav1}</li>
+            </button>
           </Link>
           <Link to="/shop">
-            <li className="hover:text-black">{nav2}</li>
+            <button onClick={() => window.scrollTo(0, 0)}>
+              <li className="hover:text-black">{nav2}</li>
+            </button>
           </Link>
           <Link to="/store">
-            <li className="hover:text-black">{nav3}</li>
+            <button onClick={() => window.scrollTo(0, 0)}>
+              <li className="hover:text-black">{nav3}</li>
+            </button>
           </Link>
           <Link to="/contact">
-            <li className="hover:text-black">{nav4}</li>
+            <button onClick={() => window.scrollTo(0, 0)}>
+              <li className="hover:text-black">{nav4}</li>
+            </button>
           </Link>
         </ul>
         <div className="hidden md:flex space-x-5 items-center">
@@ -54,7 +66,16 @@ const nav4 = "ContactUs";//isDetailPage ? "Categories" : "ContactUs";
             onClick={() => setSearch(!search)}
             className="cursor-pointer"
           />
-          <ShoppingBag />
+          <div className="relative">
+            <Link to="/cart">
+              <ShoppingBag className="w-6 h-6 text-black" />
+              {cartQaount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-yellow-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">
+                  {cartQaount}
+                </span>
+              )}
+            </Link>
+          </div>
           <img
             src="/assets/images/profileimg.jpg"
             alt="Profile"
@@ -84,7 +105,16 @@ const nav4 = "ContactUs";//isDetailPage ? "Categories" : "ContactUs";
             </Link>
             <div className="flex space-x-5 mt-4">
               <Search />
-              <ShoppingBag />
+              <div className="relative">
+                <Link to="/cart">
+                  <ShoppingBag className="w-6 h-6 text-black" />
+                  {cartQaount > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-yellow-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">
+                      {cartQaount}
+                    </span>
+                  )}
+                </Link>
+              </div>
               <img
                 src="/assets/images/profileimg.jpg"
                 alt="Profile"

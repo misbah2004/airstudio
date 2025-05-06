@@ -42,8 +42,8 @@ const ContactUsSection = () => {
                 Follow Us
               </h1>
               <span className="flex space-x-3 text-2xl text-[#4D4D4D]">
-                <FaInstagram />
-                <FaTwitter />
+                <FaInstagram className="hover:text-gray-300 duration-300"/>
+                <FaTwitter  className="hover:text-gray-300 duration-300"/>
               </span>
             </div>
           </div>
