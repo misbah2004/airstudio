@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -7,12 +8,12 @@ const AllProducts = () => {
     const fetchPhones = async () => {
       try {
         const response = await fetch("https://dummyjson.com/products/search?q=phone");
-        if (!response.ok) {
+        if (!response.ok){
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log("Fetched Phones:", data.products); // Console mein check
-        setProducts(data.products); // State mein save
+        console.log("Fetched Phones:", data.products); 
+        setProducts(data.products); 
       } catch (error) {
         console.error("Error fetching phones:", error);
       }
@@ -34,11 +35,12 @@ const AllProducts = () => {
               key={product.id}
               className="bg-white shadow-lg rounded-lg overflow-hidden transition hover:shadow-2xl"
             >
-              <img
+             <Link onClick={window.scrollTo(0,0)} to={`/productphone/${product.id}`}> <img
                 src={product.thumbnail}
                 alt={product.title}
                 className="h-48 w-full object-contain"
               />
+              </Link>
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-1">{product.title}</h3>
                 <p className="text-gray-600 text-sm mb-2 line-clamp-2">

@@ -19,6 +19,7 @@ import AddToCart from './components/cart/AddToCart'
 import ProductsSection from './components/products/ProductsSection'
 import { Toaster } from 'react-hot-toast'
 import AllProducts from './components/products/AllProducts'
+import ProductPhoneSection from './components/Details/ProductPhoneSection'
 const App = () => {
 
   return (
@@ -40,6 +41,7 @@ const App = () => {
       <Route path='/sellerregister' element={<SellerRegisterPage/>}/>
       <Route path='/cart' element={<AddToCart/>}/>
       <Route path='/allproducts' element={<AllProducts/>}/>
+      <Route path='/productphone/:id' element={<ProductPhoneSection/>}/>
     </Routes>
       </Layout>
     </>

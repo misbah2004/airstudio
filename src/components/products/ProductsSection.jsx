@@ -1,6 +1,6 @@
 import { Heart, MoveRight } from "lucide-react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { data } from "../data/utilites";
 import { useSelector, useDispatch } from "react-redux";
 import { AddToCart } from "../../features/cartSlice";
@@ -18,11 +18,10 @@ const ProductsSection = ({
   const toggleLike = (id) => {
     setLike((prev) => ({ ...prev, [id]: !prev[id] }));
   };
-
-  const productData = data;
-  const navigate = useNavigate();
+  
   const dispatch = useDispatch();
   const items = useSelector((state) => state.allCart.items);
+
 
   return (
     <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 flex">
@@ -35,18 +34,16 @@ const ProductsSection = ({
             </h1>
             <p className="text-sm text-[#555]">{head2}</p>
           </div>
-          <Link
-            to=""
+          <p
             className="flex items-center text-[#236EDE] gap-1 font-medium"
           >
             {head3}
-          </Link>
+          </p>
         </div>
 
         <div className="w-full text-center text-2xl font-semibold">
           {tophead}
         </div>
-
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {items.map((item, index) => (
             <React.Fragment key={index}>
