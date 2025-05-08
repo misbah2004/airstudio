@@ -38,8 +38,11 @@ export const cartSlice = createSlice({
     getCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
-          const { price, quantity } = cartItem;
+          const priceString = cartItem.price || "0";
+          const price = parseFloat(priceString.replace(/[^0-9.]/g, "")) || 0;
+          const quantity = parseInt(cartItem.quantity) || 0;
           const itemTotal = price * quantity;
+    
           cartTotal.totalPrice += itemTotal;
           cartTotal.totalQuantity += quantity;
           return cartTotal;
@@ -49,13 +52,13 @@ export const cartSlice = createSlice({
           totalQuantity: 0,
         }
       );
+    
       state.totalPrice = parseInt(totalPrice.toFixed(2));
       state.totalQuantity = totalQuantity;
-    },
+    },    
   },
 });
 
-// Export all actions including DeleteFromCart
 export const {
   AddToCart,
   IncrementQuantity,

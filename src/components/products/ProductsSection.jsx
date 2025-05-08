@@ -6,22 +6,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { AddToCart } from "../../features/cartSlice";
 import toast from "react-hot-toast";
 
-const ProductsSection = ({
-  component,
-  head,
-  head2,
-  head3,
-  tophead,
-  midhead,
-}) => {
+const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
   const [like, setLike] = useState({});
   const toggleLike = (id) => {
     setLike((prev) => ({ ...prev, [id]: !prev[id] }));
   };
-  
+
   const dispatch = useDispatch();
   const items = useSelector((state) => state.allCart.items);
-
 
   return (
     <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 flex">
@@ -34,9 +26,7 @@ const ProductsSection = ({
             </h1>
             <p className="text-sm text-[#555]">{head2}</p>
           </div>
-          <p
-            className="flex items-center text-[#236EDE] gap-1 font-medium"
-          >
+          <p className="flex items-center text-[#236EDE] gap-1 font-medium">
             {head3}
           </p>
         </div>
@@ -52,7 +42,7 @@ const ProductsSection = ({
                   <h2 className="text-2xl font-bold text-center">{midhead}</h2>
                 </div>
               )}
-              <div className="w-full rounded-2xl overflow-hidden bg-white object-contain shadow-xs transition">
+              <div className="w-full rounded-2xl overflow-hidden shadow-xs transition">
                 <Link
                   to={`/detail/${item.id}`}
                   onClick={() => window.scrollTo(0, 0)}
@@ -60,7 +50,7 @@ const ProductsSection = ({
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-60 object-cover hover:scale-105 duration-300"
+                    className="w-full h-60 object-cover transform hover:scale-105 transition-transform duration-300 ease-in-out"
                   />
                 </Link>
 
@@ -73,20 +63,22 @@ const ProductsSection = ({
                       <h2 className="text-lg font-medium">{item.name}</h2>
                     </Link>
                     <p className="text-[#236EDE] text-base font-semibold">
-                      {item.price}
+                      {item.price.startsWith("$")
+                        ? item.price
+                        : `$${item.price}`}
                     </p>
                   </div>
+
                   <div className="flex flex-col items-end gap-2">
                     <div
                       className="p-1 bg-[#F5F5F5] rounded-full cursor-pointer"
-                      onClick={(e) => {
-                        toggleLike(item.id);
-                      }}
+                      onClick={() => toggleLike(item.id)}
+                      title="Add to Wishlist"
                     >
                       <Heart
-                        className={`text-black ${
-                          like[item.id] ? "text-white" : ""
-                        }`}
+                        className={`${
+                          like[item.id] ? "text-yellow-400" : "text-gray-400"
+                        } transition duration-200`}
                       />
                     </div>
 
@@ -100,6 +92,7 @@ const ProductsSection = ({
                         });
                       }}
                       className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full"
+                      title="Add to Cart"
                     >
                       Add to Cart
                     </button>

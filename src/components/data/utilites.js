@@ -7,13 +7,12 @@ export const storeCardSection = [
 ]
 
 // ------------product---------------// 
-
 export const data = [
     {
       id: 1,
       img: "/assets/images/card1.jpeg",
       name: "Minimal Dress",
-      price: "30",
+      price: "$30",
       detail:['detail1.jpeg',
         'detail5.jpeg',
         'detail3.jpeg',
@@ -25,7 +24,7 @@ export const data = [
       id: 2,
       img: "/assets/images/card3.jpeg",
       name: "Minimal Dress",
-      price: "50",
+      price: "$50",
       detail:['detail1.jpeg',
         'detail4.jpeg',
         'detail5.jpeg',
@@ -37,7 +36,7 @@ export const data = [
       id: 3,
       img: "/assets/images/card4.jpeg",
       name: "Minimal Dress",
-      price: "69",
+      price: "$69",
       detail:['detail1.jpeg',
         'detail3.jpeg',
         'detail4.jpeg',
@@ -49,7 +48,7 @@ export const data = [
       id: 4,
       img: "/assets/images/card5.jpeg",
       name: "Minimal Dress",
-      price: "70",
+      price: "$70",
       detail:['detail1.jpeg',
         'detail3.jpeg',
         'detail4.jpeg',
@@ -61,7 +60,7 @@ export const data = [
       id: 5,
       img: "/assets/images/card6.jpeg",
       name: "Minimal Dress",
-      price: "90",
+      price: "$90",
       detail:['detail1.jpeg',
         'detail3.jpeg',
         'detail4.jpeg',
@@ -73,7 +72,7 @@ export const data = [
       id: 6,
       img: "/assets/images/card3.jpeg",
       name: "Minimal Dress",
-      price: "1130",
+      price: "$1130",
       detail:['detail1.jpeg',
         'detail3.jpeg',
         'detail2.jpeg',
@@ -85,14 +84,14 @@ export const data = [
       id: 7,
       img: "/assets/images/watch.jpg",
       name: "Apple Watch",
-      price: "1000",
+      price: "$1000",
       detail:['detail1.jpeg',
         'detail3.jpeg',
         'detail2.jpeg',
         'detail5.jpeg',
         'detail4.jpeg',
         'detail6.jpeg',]
-    }, 
+    },  
   ];
 
  export const cartData = [
