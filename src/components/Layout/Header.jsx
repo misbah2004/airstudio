@@ -1,4 +1,4 @@
-import { CloudDownload, Search, ShoppingBag, Menu } from "lucide-react";
+import { CloudDownload, Search, ShoppingBag, Menu, Bookmark } from "lucide-react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -55,11 +55,12 @@ const Header = () => {
           </Link>
         </ul>
         <div className="hidden md:flex space-x-5 items-center">
+          <div className=""><Bookmark className=""/></div>
           {search && (
             <input
               type="text"
               placeholder="Search Anythik"
-              className="w-40 h-8 px-2 border border-gray-300 rounded transition-all duration-300"
+              className="w-40 h-8 px-2 border border-gray-300 rounded transition-all"
             />
           )}
           <Search
@@ -87,6 +88,7 @@ const Header = () => {
             <Menu className="h-6 w-6" />
           </button>
         </div>
+
       </nav>
       {menuOpen && (
         <div className="md:hidden absolute top-[70px] left-0 w-full bg-white z-50 px-4 pb-4 shadow-md">
