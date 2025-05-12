@@ -21,6 +21,7 @@ import { Toaster } from 'react-hot-toast'
 import AllProducts from './components/products/AllProducts'
 import ProductPhoneSection from './components/Details/ProductPhoneSection'
 import ProductUploadPage from './pages/ProductUploadPage'
+import Errorcomponent from './components/error/Errorcomponent'
 const App = () => {
 
   return (
@@ -44,6 +45,7 @@ const App = () => {
       <Route path='/allproducts' element={<AllProducts/>}/>
       <Route path='/products' element={<ProductUploadPage/>}/>
       <Route path='/productphone/:id' element={<ProductPhoneSection/>}/>
+      <Route path='*' element={<Errorcomponent/>}/>
     </Routes>
       </Layout>
     </>
