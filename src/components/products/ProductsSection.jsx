@@ -6,15 +6,21 @@ import { useSelector, useDispatch } from "react-redux";
 import { AddToCart } from "../../features/cartSlice";
 import toast from "react-hot-toast";
 
-const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
+
+const ProductsSection = ({component,head,head2,head3,tophead,midhead,selectedCategory}) => {
   const [like, setLike] = useState({});
   const toggleLike = (id) => {
-    setLike((prev) => ({ ...prev, [id]: !prev[id] }));
+    setLike((prev) => ({...prev, [id]: !prev[id] }));
   };
 
   const dispatch = useDispatch();
   const items = useSelector((state) => state.allCart.items);
 
+  const filteredItems = 
+  selectedCategory && selectedCategory !== "All"
+  ?items.filter(item =>  item.category === selectedCategory)
+  :items;
+  
   return (
     <div className="bg-[#FCFCFC] py-10 px-4 sm:px-8 flex">
       <div>{component}</div>
@@ -35,7 +41,7 @@ const ProductsSection = ({component,head,head2,head3,tophead,midhead,}) => {
           {tophead}
         </div>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {items.map((item, index) => (
+          {filteredItems.map((item, index) => (
             <React.Fragment key={index}>
               {index === 3 && (
                 <div className="col-span-full">

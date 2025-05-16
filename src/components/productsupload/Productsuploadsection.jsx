@@ -3,13 +3,9 @@ import React, { useState } from "react";
 export default function ProductUploadPage() {
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [discountPrice, setDiscountPrice] = useState("");
-  const [quantity, setQuantity] = useState("");
   const [category, setCategory] = useState("");
-  const [tags, setTags] = useState("");
-  const [inStock, setInStock] = useState(true);
+  const [data, setData] = useState([]);
 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
@@ -28,23 +24,36 @@ export default function ProductUploadPage() {
     setImages(updatedImages);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const productData = {
-      title,
-      description,
-      price,
-      discountPrice,
-      quantity,
-      category,
-      tags: tags.split(","),
-      inStock,
-      images,
-    };
-    console.log("Uploading product:", productData);
-    // Backend API call here
+  const handleClear = () => {
+    setTitle("");
+    setImages([]);
+    setPrice("");
+    setCategory("");
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const dt = [...data];
+    const newObject = {
+      id: dt.length + 1,
+      category: category,
+      img: images,
+      name: title,
+      price: price,
+      detail: [
+        "detail1.jpeg",
+        "detail3.jpeg",
+        "detail4.jpeg",
+        "detail5.jpeg",
+        "detail2.jpeg",
+        "detail6.jpeg",
+      ],
+    };
+    dt.push(newObject);
+    setData(dt);
+    handleClear();
+    console.log(dt)
+  };
   return (
     <div className="max-w-4xl mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Upload New Product</h2>
@@ -101,16 +110,6 @@ export default function ProductUploadPage() {
           />
         </div>
 
-        <div>
-          <label className="block font-medium">Description</label>
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            className="w-full border rounded p-2 mt-1"
-            rows="4"
-          ></textarea>
-        </div>
-
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block font-medium">Price</label>
@@ -118,26 +117,6 @@ export default function ProductUploadPage() {
               type="number"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              className="w-full border rounded p-2 mt-1"
-            />
-          </div>
-
-          <div>
-            <label className="block font-medium">Discount Price</label>
-            <input
-              type="number"
-              value={discountPrice}
-              onChange={(e) => setDiscountPrice(e.target.value)}
-              className="w-full border rounded p-2 mt-1"
-            />
-          </div>
-
-          <div>
-            <label className="block font-medium">Quantity</label>
-            <input
-              type="number"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
               className="w-full border rounded p-2 mt-1"
             />
           </div>
@@ -151,25 +130,6 @@ export default function ProductUploadPage() {
               className="w-full border rounded p-2 mt-1"
             />
           </div>
-        </div>
-
-        <div>
-          <label className="block font-medium">Tags (comma separated)</label>
-          <input
-            type="text"
-            value={tags}
-            onChange={(e) => setTags(e.target.value)}
-            className="w-full border rounded p-2 mt-1"
-          />
-        </div>
-
-        <div className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={inStock}
-            onChange={() => setInStock(!inStock)}
-          />
-          <label className="font-medium">In Stock</label>
         </div>
 
         <button

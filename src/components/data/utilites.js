@@ -7,21 +7,24 @@ export const storeCardSection = [
 ]
 
 // ------------product---------------// 
+
 export const data = [
-    {
-      id: 1,
-      img: "/assets/images/card1.jpeg",
-      name: "Minimal Dress",
-      price: "$30",
-      detail:['detail1.jpeg',
-        'detail5.jpeg',
-        'detail3.jpeg',
-        'detail4.jpeg',
-        'detail2.jpeg',
-            'detail6.jpeg',]
+  {
+    id: 1,
+    category: "Men",
+    img: "/assets/images/card1.jpeg",
+    name: "Minimal Dress",
+    price: "$30",
+    detail:['detail1.jpeg',
+      'detail5.jpeg',
+      'detail3.jpeg',
+      'detail4.jpeg',
+      'detail2.jpeg',
+      'detail6.jpeg',]
     },
     {
       id: 2,
+      category: "Women",
       img: "/assets/images/card3.jpeg",
       name: "Minimal Dress",
       price: "$50",
@@ -31,25 +34,27 @@ export const data = [
         'detail3.jpeg',
         'detail2.jpeg',
         'detail6.jpeg',]
-    },
-    {
-      id: 3,
-      img: "/assets/images/card4.jpeg",
-      name: "Minimal Dress",
-      price: "$69",
-      detail:['detail1.jpeg',
-        'detail3.jpeg',
-        'detail4.jpeg',
-        'detail5.jpeg',
-        'detail2.jpeg',
-        'detail6.jpeg',]
-    },
-    {
-      id: 4,
-      img: "/assets/images/card5.jpeg",
-      name: "Minimal Dress",
-      price: "$70",
-      detail:['detail1.jpeg',
+      },
+      {
+        id: 3,
+        category: "Fashion",
+        img: "/assets/images/card4.jpeg",
+        name: "Minimal Dress",
+        price: "$69",
+        detail:['detail1.jpeg',
+          'detail3.jpeg',
+          'detail4.jpeg',
+          'detail5.jpeg',
+          'detail2.jpeg',
+          'detail6.jpeg',]
+        },
+        {
+          id: 4,
+          category: "Denim",
+          img: "/assets/images/card5.jpeg",
+          name: "Minimal Dress",
+          price: "$70",
+          detail:['detail1.jpeg',
         'detail3.jpeg',
         'detail4.jpeg',
         'detail5.jpeg',
@@ -58,6 +63,7 @@ export const data = [
     },
     {
       id: 5,
+      category: "Men",
       img: "/assets/images/card6.jpeg",
       name: "Minimal Dress",
       price: "$90",
@@ -70,6 +76,7 @@ export const data = [
     },
     {
       id: 6,
+      category: "Dress",
       img: "/assets/images/card3.jpeg",
       name: "Minimal Dress",
       price: "$1130",
@@ -79,9 +86,10 @@ export const data = [
         'detail5.jpeg',
         'detail4.jpeg',
         'detail6.jpeg',]
-    },
+      },
     {
       id: 7,
+      category: "Men",
       img: "/assets/images/watch.jpg",
       name: "Apple Watch",
       price: "$1000",
@@ -103,3 +111,4 @@ export const data = [
       },
   ];
    
+      // "Fashion" , "Men" , "Women" , "Denim" , "Dress"

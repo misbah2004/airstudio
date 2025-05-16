@@ -6,11 +6,12 @@ import ProductSideSection from '../components/products/ProductSideSection'
  
 const ShopPage = () => {
   
+  const [selectedCategory, setSelectedCategory] = useState('All')
   
   return (
     <div>
       <ShopHeroSection heading={"Shop"}  />
-      <div className='mt-20'><ProductsSection component={<ProductSideSection />}/></div>
+      <div className='mt-20'><ProductsSection component={<ProductSideSection setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory}/>}selectedCategory={selectedCategory}  /></div>
       <SubscriptionSection/>
     </div>
   )
