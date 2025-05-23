@@ -33,9 +33,7 @@ const ProductDetailSection = () => {
             />
           ))}
         </div>
-
-
-        <div className="mt-4 lg:mt-0 overflow-hidden rounded-2xl">
+        <div className="mt-4 lg:mt-0 overflow-hidden rounded-2xl lg:h-[570px]">
           <img
             src={product.img}
             alt=""
@@ -43,12 +41,8 @@ const ProductDetailSection = () => {
           />
         </div>
       </div>
-
-
       <div className="w-full lg:w-2/5 flex flex-col space-y-4 mt-6 lg:mt-0">
         <h1 className="font-albert text-2xl">{product.name}</h1>
-
-
         <div className="flex flex-wrap items-center gap-2">
           <button className="rounded-sm p-1 border border-black">
             Best seller
@@ -64,8 +58,6 @@ const ProductDetailSection = () => {
           </svg>
           <p className="text-sm">Selling fast! 56 people have this in their carts.</p>
         </div>
-
-        {/* price */}
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-2xl text-[#FFB53F]">{product.price}</span>
           <span className="text-2xl line-through">$10.00</span>
@@ -73,13 +65,10 @@ const ProductDetailSection = () => {
             20% OFF
           </button>
         </div>
-
         <div>
           <span className="px-2 py-1 bg-black text-white text-sm rounded">20</span>{' '}
           <span className="font-semibold text-sm">People are viewing this right now</span>
         </div>
-
-        
         <div className="border border-[#FFB53F] p-4 w-sm flex flex-col items-center">
           <span className="flex items-center gap-1 text-sm">
             <FaStopwatch /> HURRY UP! SALE ENDS IN:
@@ -88,7 +77,6 @@ const ProductDetailSection = () => {
             72 Days : 1 Hours : 15 Mins : 10 Secs
           </span>
         </div>
-
         <div>
           <h1 className="flex items-center gap-1">
             Color: <span className="font-semibold">Beige</span>
