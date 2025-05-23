@@ -7,7 +7,7 @@ import {
   getCartTotal,
 } from "../../features/cartSlice";
 import { Trash2 } from "lucide-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AddToCart = () => {
   const dispatch = useDispatch();
