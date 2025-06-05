@@ -1,11 +1,12 @@
 import { CloudDownload, Search, ShoppingBag, Menu, Bookmark } from "lucide-react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
   const { cart } = useSelector((state) => state.allCart);
   // const cartQaount = items.length;

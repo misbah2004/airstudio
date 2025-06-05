@@ -22,6 +22,7 @@ const AllProducts = () => {
   const total = data?.total || 0;
   const limit = data?.limit || 8;
   const totalPages = Math.ceil(total / limit);
+  
 
   if (isLoading) return <p className="text-center">Loading...</p>;
   if (isError) return <p className="text-center text-red-500">Error fetching data</p>;

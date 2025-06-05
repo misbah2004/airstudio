@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Heart, MoveRight } from "lucide-react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
@@ -94,7 +95,7 @@ const ProductsSection = ({component,head,head2,head3,tophead,midhead,selectedCat
                         dispatch(AddToCart(item));
                         toast.success(`${item.name} added to cart!`, {
                           duration: 2000,
-                          position: "top-center",
+                          position: "top-right",
                         });
                       }}
                       className="bg-[#FFB53F] text-sm text-white px-4 py-1 rounded-full"

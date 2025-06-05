@@ -4,7 +4,7 @@ import { ArrowRightIcon, Star } from "lucide-react";
 const HomeHeroSection = () => {
   return (
     <div className="grid grid-cols-12 gap-2 md:px-10 lg:px-0 py-12 bg-white sm:py-10 mt-10">
-      <div className="col-span-2  hidden lg:block ">
+      <div className="col-span-2  hidden lg:block">
         <img
           src="/assets/images/bannerheadphone.jpeg"
           className="relative left-40 mb-10 rounded-[50%] h-15 w-20    "

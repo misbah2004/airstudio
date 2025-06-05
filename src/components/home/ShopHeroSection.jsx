@@ -12,7 +12,7 @@ const ShopHeroSection = ({heading}) => {
         </div>
         <div className=' lg:mt-[15%] flex flex-col justify-center items-center'>
           <h1 className='text-[#FFB53F] text-5xl font-semibold'>{heading }</h1>
-          <p className='text-center text-[#858585]  text-[10px] lg:text-[20px]'>Lorem Ipsum is simply dummy text of the printing and typesetting <br /> industry. Lorem Ipsum has been the industry's standard dummy text ever <br /> since the 1500s,
+          <p className='text-center text-[#858585]  text-[10px] lg:text-[20px]'>Lorem Ipsumis simply dummy text of the printing and typesetting <br /> industry. Lorem Ipsum has been the industry's standard dummy text ever <br /> since the 1500s,
           </p>
         </div>
         <div className='w-xs hidden lg:block '>
